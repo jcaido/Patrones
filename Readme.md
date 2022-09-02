@@ -16,4 +16,20 @@
 
     * En la clase Main, inicializamos varios ojetos Ordenador con diferentes configuraciones, en función del numero
       de atributos que necesitemos para construir el objeto.
-        
+
+3.- PATRON OBSERVER
+
+    Simulamos un centro de trabajo que puede cambiar la hora de apertura / cierre del centro y el menu diario a degustar
+    en su restaurante. Cada vez que se produzca un cambio en cualquiera de estas circunstancias (atributos) se producirá 
+    la correspondiente notificación a los departamentos del centro (Contabilidad, Ventas y Producción).
+
+    * La clase "CentroDeTrabajo" es la que se encarga de mantener una lista con todos los observadores (departamentos de
+      Contabilidad, Ventas y Producción). Así mismo, implementa métodos para añadir observadores ("addObserver"), cambiar
+      atributos ("cambiarApertura", "cambiarCierre", "cambiarMenu") y los más importante un método para notificar estos
+      cambios a los departamentos (observadores).
+
+    * Las clases "Contabilidad", "Ventas" y "Producción" implementan la interface "DepartamentoObserver" acualizando los
+      atributos cambiados.
+
+    * En la clase "Main" probamos el sistema, realizando algún cambio y observando como se producen las correspondientes
+      notificaciones.
