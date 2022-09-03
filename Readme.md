@@ -33,3 +33,22 @@
 
     * En la clase "Main" probamos el sistema, realizando algún cambio y observando como se producen las correspondientes
       notificaciones.
+
+4.- PATRON DECORATOR
+
+    Queremos adquir un televisor y tenemos varias opciones. Televisor estándar, con equipo de sonido envolvente añadido
+    y una tercera opcion añadiendo un TvBox para convertirlo en una smartTv.
+
+    * La clase abstracta "Televisor" es la que contiene las caracteristicas del equipo (atributos), así como los métodos
+      abstrator mostrarTelevisor() y precio().
+
+    * la clase "TvEstandar" extiende la clase "Televisor" e implementa sus métodos obligatorios para mostrarnos que se trata
+      de una opción básica (adquirir la television estandar) y su precio.
+
+    * La clase abstracta "TvDecorator" exiende de la clase "Televisor" y es la que contiene el código necesario para construir
+      los decoradores. En nuestro caso los decoradores serían las clases "TvAudioEnvolvente" y "SmartTvAudioEnvolvente" que
+      extienden de "TvDecorator" e implementan los métodos concretos para añadir el equipo de sonido envolvente y la tvBox así
+      como sus correspondientes precios.
+
+    * En la clase "Main", instanciamos un nuevo objeto de tipo Televisor que sería inicialmente una TvEstandar y posteriormente
+      añdimos los decoradores para ir viendo las opciones y sus precios.
