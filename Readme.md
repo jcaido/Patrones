@@ -52,3 +52,16 @@
 
     * En la clase "Main", instanciamos un nuevo objeto de tipo Televisor que sería inicialmente una TvEstandar y posteriormente
       añdimos los decoradores para ir viendo las opciones y sus precios.
+
+
+5.- PATRON STRATEGY
+
+    Gestión de pedidos en una tienda online de productos relacionados con el ajedrez. A través de sendas interfaces implementamos
+    clases para la gestión del envío y la forma de pago. Las  clases "EnvioEstandar", "EnvioRapido" y "EnvioVeloz" implementan la
+    interface "EnvioStrategy". Las clases "Reembolso", "Transferencia" y "Tarjeta"  implementan la interface "PagoStrategy".
+    
+    La clase "Pedido" utiliza ambas interfaces para definir tanto el tipo de envío como la forma de pago. Además, define la lista
+    artículos del pedido y el cáculo del coste asociado a la lista. Posteriormente muestra toda la información del pedido haciendo
+    uso del método mostrarPedido().
+
+    Por último, en la clase "Main" creamos un pedido concreto y mostramos su información por consola.
