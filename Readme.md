@@ -57,11 +57,28 @@
 5.- PATRON STRATEGY
 
     Gestión de pedidos en una tienda online de productos relacionados con el ajedrez. A través de sendas interfaces implementamos
-    clases para la gestión del envío y la forma de pago. Las  clases "EnvioEstandar", "EnvioRapido" y "EnvioVeloz" implementan la
+    clases para la gestión del envío y la forma de pago. 
+    
+    * Las  clases "EnvioEstandar", "EnvioRapido" y "EnvioVeloz" implementan la
     interface "EnvioStrategy". Las clases "Reembolso", "Transferencia" y "Tarjeta"  implementan la interface "PagoStrategy".
     
-    La clase "Pedido" utiliza ambas interfaces para definir tanto el tipo de envío como la forma de pago. Además, define la lista
+    * La clase "Pedido" utiliza ambas interfaces para definir tanto el tipo de envío como la forma de pago. Además, define la lista
     artículos del pedido y el cáculo del coste asociado a la lista. Posteriormente muestra toda la información del pedido haciendo
     uso del método mostrarPedido().
 
-    Por último, en la clase "Main" creamos un pedido concreto y mostramos su información por consola.
+    * Por último, en la clase "Main" creamos un pedido concreto y mostramos su información por consola.
+
+
+6.- PATRON PROXY
+
+    Nuestra aplicación necesita abrir un archivo pesado llamado "proteinas.csv". Con el objetivo de no saturar la memoria, sólo se
+    inicializará el objeto "ArchivoDatos" cuando sea necesario. Para ello utilizamos un proxy, el cual se encargará de suplantar al
+    objeto pesado.
+
+    * Tanto las clases "ArchivoDatos" como "ProxyArchivoDatos" implementan la interface "Archivo.
+
+    * En la clase "Main" simulamos la apertura de un fichero de datos pesado (proteinas.csv). Para ello instanciamos un objeto de la
+      clase "ProxyArchivoDatos", el cual abrirá el archivo. Como vemos, el archivo no se abre al arrancar la aplicación, sino cuando
+      ha sido necesario.
+
+    
