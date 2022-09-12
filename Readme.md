@@ -82,7 +82,7 @@
       ha sido necesario.
 
 
-7.- PATRON singleton
+7.- PATRON SINGLETON
 
     En una empresa, suponemos que sólo puede existir un gerente. Para ello, nuestra aplicación no puede permitir tener instanciados 
     mas de un objeto de la clase Gerente. Para conseguirlo, utilizamos el patrón singleton.
@@ -92,5 +92,16 @@
     
     * En la clase "Main" concretamos la creación del gerente de la empresa y visualizamos sus datos, comprobando que no es posible crear
       un nuevo gerente.
+
+
+8.- PATRON FACTORY METHOD
+
+    En este caso, el patrón Factory Method nos va a permitir crear una jerarquía de clases que implementan la interfaz "Vehiculo", en
+    concreto las clases "VehiculoOcasion", "VehiculoNuevo" y "VehiculoDemo". 
+
+    * La clase "VehiculoFactory" es la que implementa el patrón, creando el vehiculo concreto dependiendo de un parámetro de tipo String
+      que indica el tipo de vehiculo a crear.
+
+    * En la clase "Main", creamos dos vehículos concretos, uno de tipo "VehiculoOcasion" y otro de tipo  "VehiculoDemo".
 
     
