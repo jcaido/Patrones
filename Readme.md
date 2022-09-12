@@ -81,4 +81,16 @@
       clase "ProxyArchivoDatos", el cual abrirá el archivo. Como vemos, el archivo no se abre al arrancar la aplicación, sino cuando
       ha sido necesario.
 
+
+7.- PATRON singleton
+
+    En una empresa, suponemos que sólo puede existir un gerente. Para ello, nuestra aplicación no puede permitir tener instanciados 
+    mas de un objeto de la clase Gerente. Para conseguirlo, utilizamos el patrón singleton.
+
+    * La clase "Gerente" implementa el patrón. Para ello define el método estático getInstance(), el cual crea un nuevo objeto gerente
+      siempre y cuando no haya sido creado con anterioridad.
+    
+    * En la clase "Main" concretamos la creación del gerente de la empresa y visualizamos sus datos, comprobando que no es posible crear
+      un nuevo gerente.
+
     
