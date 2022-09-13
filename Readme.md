@@ -109,9 +109,11 @@
 
     Utilizamos el patrón prototype para clonar un objeto de la clase "Libro". No solo copiamos los atributos y métodos, sino también su
     estado. Para ello usamos el método clonar() de clase "Libro" el  cual devuelve un objeto de misma clase con idénticas características
-    (atributos, métodos y estado).
+    (atributos, métodos y estado). En la clase "Pelicula" implementamos el patrón prototype de otra forma, esta vez utilizando la interfaz
+    "Cloneable".
 
-    En la clase "Main" instanciamos un objeto concreto de la clase  "Libro" y lo clonamos, comprobando que la clonación ha funcionado.
+    En la clase "Main" instanciamos un objeto concreto de las clases  "Libro" y "Pelicula" y los clonamos, comprobando que la clonación ha
+    funcionado.
 
     
 
